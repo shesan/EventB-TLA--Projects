@@ -1,0 +1,34 @@
+------------------------------- MODULE Filters -------------------------------
+
+EXTENDS Integers, Sequences
+
+CONSTANT Input, Divisor
+
+VARIABLES channel
+
+
+Spaces[n \in 1..(Len(Divisor)+1)] == IF n = 1 THEN Input ELSE <<>>
+
+TypeOk == channel \in Seq(Seq(Nat))
+
+Init ==     /\ channel = Spaces
+
+Math(n) == /\ Len(channel[n]) > 0
+              /\ IF Head(channel[n]) % Divisor[n] # 0
+                 THEN channel' = SubSeq(channel, 1, n-1) \o <<Tail(channel[n])>> \o <<Append(channel[n+1], Head(channel[n]))>> \o SubSeq(channel, n+2, Len(Divisor)+1)
+                 ELSE channel' = SubSeq(channel, 1, n-1) \o <<Tail(channel[n])>> \o SubSeq(channel, n+1, Len(Divisor)+1)
+
+             
+Next == \E n \in 1..Len(Divisor) : Math(n)
+
+
+
+
+
+
+
+
+=============================================================================
+\* Modification History
+\* Last modified Thu Apr 22 19:14:56 EDT 2021 by Shesan
+\* Created Mon Apr 19 12:18:23 EDT 2021 by Shesan
