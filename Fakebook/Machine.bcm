@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/Fakebook/Holder.bcc" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.seesContext#("/>
+<org.eventb.core.scInternalContext name="Holder">
+<org.eventb.core.scCarrierSet name="fb_page" org.eventb.core.source="/Fakebook/Holder.buc|org.eventb.core.contextFile#Holder|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(fb_page)"/>
+<org.eventb.core.scCarrierSet name="fb_person" org.eventb.core.source="/Fakebook/Holder.buc|org.eventb.core.contextFile#Holder|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(fb_person)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="Holdes" org.eventb.core.label="inv1" org.eventb.core.predicate="fake∈BOOL" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.invariant#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Holdet" org.eventb.core.label="inv2" org.eventb.core.predicate="directory∈fb_person ↔ fb_page" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="directory" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.variable#." org.eventb.core.type="ℙ(fb_person×fb_page)"/>
+<org.eventb.core.scVariable name="fake" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.variable#+" org.eventb.core.type="BOOL"/>
+<org.eventb.core.scEvent name="directorz" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#'">
+<org.eventb.core.scAction name="'" org.eventb.core.assignment="fake ≔ FALSE" org.eventb.core.label="act1" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="directory ≔ ∅ ⦂ ℙ(fb_person×fb_page)" org.eventb.core.label="act2" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#'|org.eventb.core.action#("/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="director{" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="post" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="person∈fb_person" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="page∈fb_page" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="page∉ran(directory)" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.guard#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="person" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.parameter#'" org.eventb.core.type="fb_person"/>
+<org.eventb.core.scParameter name="page" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.parameter#(" org.eventb.core.type="fb_page"/>
+<org.eventb.core.scAction name="persoo" org.eventb.core.assignment="directory ≔ directory∪{person ↦ page}" org.eventb.core.label="act1" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.action#+"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="director|" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="label" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="person∈fb_person" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="page∈fb_page" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="person∉dom(directory ▷ {page})" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="person" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.parameter#'" org.eventb.core.type="fb_person"/>
+<org.eventb.core.scParameter name="page" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.parameter#(" org.eventb.core.type="fb_page"/>
+<org.eventb.core.scAction name="persoo" org.eventb.core.assignment="fake ≔ TRUE" org.eventb.core.label="act1" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.action#,"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

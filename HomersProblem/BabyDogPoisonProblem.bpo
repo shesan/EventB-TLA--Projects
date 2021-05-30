@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="PASSENGER" org.eventb.core.type="ℙ(PASSENGER)"/>
+<org.eventb.core.poIdentifier name="poison" org.eventb.core.type="PASSENGER"/>
+<org.eventb.core.poIdentifier name="baby" org.eventb.core.type="PASSENGER"/>
+<org.eventb.core.poIdentifier name="dog" org.eventb.core.type="PASSENGER"/>
+<org.eventb.core.poPredicate name="PASSENGES" org.eventb.core.predicate="PASSENGER={baby,dog,poison}" org.eventb.core.source="/HomersProblem/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="PASSENGET" org.eventb.core.predicate="baby≠dog" org.eventb.core.source="/HomersProblem/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PASSENGEU" org.eventb.core.predicate="baby≠poison" org.eventb.core.source="/HomersProblem/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PASSENGEV" org.eventb.core.predicate="dog≠poison" org.eventb.core.source="/HomersProblem/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="19">
+<org.eventb.core.poIdentifier name="everyoneOver" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="boatAtDestination" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="ℙ(PASSENGER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTboatAtDestinatioo" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="19">
+<org.eventb.core.poIdentifier name="boatAtDestination'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="destination'" org.eventb.core.type="ℙ(PASSENGER)"/>
+<org.eventb.core.poIdentifier name="everyoneOver'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPboatAtDestinatioo" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTIDENTboatAtDestinatioo" org.eventb.core.poStamp="19"/>
+<org.eventb.core.poSequent name="forth/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatiop'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(passengers)" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatiop'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTboatAtDestinatiop" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+<org.eventb.core.poIdentifier name="boatAtDestination'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="passengers" org.eventb.core.type="ℙ(PASSENGER)"/>
+<org.eventb.core.poIdentifier name="destination'" org.eventb.core.type="ℙ(PASSENGER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPboatAtDestinatiop'" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTIDENTboatAtDestinatiop" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="passengers∈ℙ(PASSENGER)" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPboatAtDestinatiop" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatiop'" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="card(passengers)≤1" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="passengers∩destination=(∅ ⦂ ℙ(PASSENGER))" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="boatAtDestination=FALSE" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="⊤" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="back/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatioq'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(passengers)" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatioq'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTboatAtDestinatioq" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+<org.eventb.core.poIdentifier name="boatAtDestination'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="passengers" org.eventb.core.type="ℙ(PASSENGER)"/>
+<org.eventb.core.poIdentifier name="destination'" org.eventb.core.type="ℙ(PASSENGER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPboatAtDestinatioq'" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTIDENTboatAtDestinatioq" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="passengers∈ℙ(PASSENGER)" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#2|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPboatAtDestinatioq" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatioq'" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="card(passengers)≤1" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="passengers⊆destination" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#2|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="boatAtDestination=TRUE" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#2|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="⊤" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#2|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="destinationExit/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatior'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(destination)" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatior'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTboatAtDestinatior" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="everyoneOver'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPboatAtDestinatior'" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTIDENTboatAtDestinatior" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="everyoneOver=FALSE" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#5|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPboatAtDestinatior" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTHYPboatAtDestinatior'" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="card(destination)=3" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HomersProblem/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="destination∈ℙ(PASSENGER)" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="boatAtDestination∈BOOL" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="⊤" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="⊤" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="everyoneOver∈BOOL" org.eventb.core.source="/HomersProblem/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#7"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

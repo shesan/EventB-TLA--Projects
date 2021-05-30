@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="PASSENGER" org.eventb.core.type="ℙ(PASSENGER)"/>
+<org.eventb.core.poIdentifier name="poison" org.eventb.core.type="PASSENGER"/>
+<org.eventb.core.poIdentifier name="baby" org.eventb.core.type="PASSENGER"/>
+<org.eventb.core.poIdentifier name="dog" org.eventb.core.type="PASSENGER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HomersProblem/BabyDogPoison.bpo|org.eventb.core.poFile#BabyDogPoison|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="PASSENGER={baby,dog,poison}" org.eventb.core.source="/HomersProblem/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="baby≠dog" org.eventb.core.source="/HomersProblem/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="baby≠poison" org.eventb.core.source="/HomersProblem/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="dog≠poison" org.eventb.core.source="/HomersProblem/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#\/"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

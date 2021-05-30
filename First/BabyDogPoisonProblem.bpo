@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="32">
+<org.eventb.core.poIdentifier name="left" org.eventb.core.type="ℙ(left)"/>
+<org.eventb.core.poIdentifier name="passenger" org.eventb.core.type="ℙ(passenger)"/>
+<org.eventb.core.poIdentifier name="right" org.eventb.core.type="ℙ(right)"/>
+<org.eventb.core.poIdentifier name="poison" org.eventb.core.type="passenger"/>
+<org.eventb.core.poIdentifier name="baby" org.eventb.core.type="passenger"/>
+<org.eventb.core.poIdentifier name="dog" org.eventb.core.type="passenger"/>
+<org.eventb.core.poPredicate name="passenges" org.eventb.core.predicate="passenger={baby,dog,poison}" org.eventb.core.source="/First/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#3"/>
+<org.eventb.core.poPredicate name="passenget" org.eventb.core.predicate="baby≠dog" org.eventb.core.source="/First/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="passengeu" org.eventb.core.predicate="baby≠poison" org.eventb.core.source="/First/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#5"/>
+<org.eventb.core.poPredicate name="passengev" org.eventb.core.predicate="dog≠poison" org.eventb.core.source="/First/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="passengew" org.eventb.core.predicate="left=(∅ ⦂ ℙ(left))" org.eventb.core.source="/First/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#;"/>
+<org.eventb.core.poPredicate name="passengex" org.eventb.core.predicate="right=(∅ ⦂ ℙ(right))" org.eventb.core.source="/First/BabyDogPoison.buc|org.eventb.core.contextFile#BabyDogPoison|org.eventb.core.axiom#="/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="32">
+<org.eventb.core.poIdentifier name="Boat" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTALLHYPBabyDogPoisop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 1" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTBabyDogPoisop" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="32">
+<org.eventb.core.poIdentifier name="Boat'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPBabyDogPoisop" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTIDENTBabyDogPoisop" org.eventb.core.poStamp="32"/>
+<org.eventb.core.poSequent name="back/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="33">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTALLHYPBabyDogPoisoq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 1" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poSequent#back\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTBabyDogPoisoq" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="33">
+<org.eventb.core.poIdentifier name="Boat'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="guest" org.eventb.core.type="passenger"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPBabyDogPoisoq" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTIDENTBabyDogPoisoq" org.eventb.core.poStamp="33">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="guest∈passenger" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Boat=1" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#0|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="forth/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTALLHYPBabyDogPoisor"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈0 ‥ 1" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poSequent#forth\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTBabyDogPoisor" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="32">
+<org.eventb.core.poIdentifier name="Boat'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPBabyDogPoisor" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#EVTIDENTBabyDogPoisor" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Boat=0" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.event#1|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/First/BabyDogPoisonProblem.bpo|org.eventb.core.poFile#BabyDogPoisonProblem|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Boat∈0 ‥ 1" org.eventb.core.source="/First/BabyDogPoisonProblem.bum|org.eventb.core.machineFile#BabyDogPoisonProblem|org.eventb.core.invariant#3"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

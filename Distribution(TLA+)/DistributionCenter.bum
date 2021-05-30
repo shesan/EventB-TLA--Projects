@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="gate ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="visited ≔ ∅" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.refinesMachine name="(" org.eventb.core.target="SimplifiedDistributionCenter"/>
+<org.eventb.core.seesContext name=")" org.eventb.core.target="World"/>
+<org.eventb.core.variable name="*" org.eventb.core.comment="maps gates to trucks" org.eventb.core.identifier="gate"/>
+<org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="gate ∈ 1‥gates ⇸ TRUCK"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv2" org.eventb.core.predicate="trucks = ran(gate)"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="arrive">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="truck"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="truck ∈ TRUCK"/>
+<org.eventb.core.refinesEvent name=")" org.eventb.core.target="arrive"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="gate(destination) ≔ truck" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="destination ∈ 1‥gates"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="destination"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="destination ∉ dom(gate)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="truck ∉ ran(gate)"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="visited ≔ visited ∪ { truck ↦ destination } " org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="depart">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="truck"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="truck ∈ TRUCK"/>
+<org.eventb.core.refinesEvent name=")" org.eventb.core.target="depart"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="gate ≔ gate ⩥ { truck }" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="truck ∈ ran(gate)"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="visited ≔ { truck } ⩤ visited" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="move">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="current"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="destination"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="current ∈ 1‥gates"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="destination ∈ 1‥gates"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="current ∈ dom(gate)"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="destination ∉ dom(gate)"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="gate ≔ ({ current } ⩤ gate) ∪ { destination ↦ gate(current) } " org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="visited ≔ visited ∪ { gate(current) ↦ destination }" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="gate(current) ↦ destination ∉ visited"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="0" org.eventb.core.comment="pairs of trucks and gates such that the truck has visited the gate" org.eventb.core.identifier="visited"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="visited ∈ TRUCK ↔ 1‥gates"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv4" org.eventb.core.predicate="finite(visited)"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="dlf" org.eventb.core.predicate="(∃ destination · destination ∈ 1‥gates ∧ destination ∉ dom(gate)) ∨ &#13;&#10;(∃ truck · truck ∈ ran(gate))" org.eventb.core.theorem="true"/>
+<org.eventb.core.variant name="4" org.eventb.core.expression="card(TRUCK) ∗ gates − card(visited)" org.eventb.core.label="vrn1"/>
+</org.eventb.core.machineFile>

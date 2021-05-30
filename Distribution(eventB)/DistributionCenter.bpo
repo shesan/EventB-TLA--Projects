@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="45">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="TRUCK" org.eventb.core.type="ℙ(TRUCK)"/>
+<org.eventb.core.poIdentifier name="gates" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="gatet" org.eventb.core.predicate="gates∈ℕ" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="gateu" org.eventb.core.predicate="finite(TRUCK)" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="gatev" org.eventb.core.predicate="∀n⦂ℤ,f⦂ℙ(ℤ×TRUCK)·n∈ℕ∧f∈1 ‥ n ⇸ TRUCK⇒(∀A⦂ℙ(ℤ)·A⊆1 ‥ n⇒card(f[A])≤card(A))" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poPredicate name="gatew" org.eventb.core.predicate="∀n⦂ℤ,f⦂ℙ(ℤ×TRUCK)·n∈ℕ∧f∈1 ‥ n ⇸ TRUCK⇒card(ran(f))≤card(dom(f))" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm1"/>
+<org.eventb.core.poPredicate name="gatex" org.eventb.core.predicate="∀n⦂ℤ,i⦂ℤ·n∈ℕ∧i∈1 ‥ n⇒card(1 ‥ n ∖ {i})=card(1 ‥ n) − 1" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="trucks" org.eventb.core.type="ℙ(TRUCK)"/>
+<org.eventb.core.poIdentifier name="gate" org.eventb.core.type="ℙ(ℤ×TRUCK)"/>
+<org.eventb.core.poPredicate name="truckt" org.eventb.core.predicate="trucks⊆TRUCK" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.invariant#*"/>
+<org.eventb.core.poPredicate name="trucku" org.eventb.core.predicate="card(trucks)≤gates" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.invariant#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtruckt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×TRUCK))∈1 ‥ gates ⇸ TRUCK" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtruckt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(TRUCK))=ran(∅ ⦂ ℙ(ℤ×TRUCK))" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtruckt" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="trucks'" org.eventb.core.type="ℙ(TRUCK)"/>
+<org.eventb.core.poIdentifier name="gate'" org.eventb.core.type="ℙ(ℤ×TRUCK)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtruckt" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTIDENTtruckt" org.eventb.core.poStamp="43"/>
+<org.eventb.core.poSequent name="arrive/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtrucku"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="gate{destination ↦ truck}∈1 ‥ gates ⇸ TRUCK" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#arrive\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arrive/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtrucku"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="trucks∪{truck}=ran(gate{destination ↦ truck})" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#arrive\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arrive/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtrucku"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="card(trucks)&lt;gates" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#+|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#+|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#-"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#arrive\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="arrive/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="45">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtrucku"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="truck∉trucks" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#+|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#+|org.eventb.core.guard#+"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#-"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#arrive\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtrucku" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="trucks'" org.eventb.core.type="ℙ(TRUCK)"/>
+<org.eventb.core.poIdentifier name="destination" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="truck" org.eventb.core.type="TRUCK"/>
+<org.eventb.core.poIdentifier name="gate'" org.eventb.core.type="ℙ(ℤ×TRUCK)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtrucku" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTIDENTtrucku" org.eventb.core.poStamp="44">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="truck∈TRUCK" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#-|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="destination∈1 ‥ gates" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#-|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destination∉dom(gate)" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#-|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="truck∉ran(gate)" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#-|org.eventb.core.guard#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="depart/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtruckv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="gate ⩥ {truck}∈1 ‥ gates ⇸ TRUCK" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#+"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#depart\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="depart/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtruckv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="trucks ∖ {truck}=ran(gate ⩥ {truck})" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#."/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#depart\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="depart/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTALLHYPtruckv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="truck∈trucks" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#-|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#-"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Distribution/SimplifiedDistributionCenter.bum|org.eventb.core.machineFile#SimplifiedDistributionCenter|org.eventb.core.event#-|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#."/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poSequent#depart\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtruckv" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="trucks'" org.eventb.core.type="ℙ(TRUCK)"/>
+<org.eventb.core.poIdentifier name="truck" org.eventb.core.type="TRUCK"/>
+<org.eventb.core.poIdentifier name="gate'" org.eventb.core.type="ℙ(ℤ×TRUCK)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtruckv" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#EVTIDENTtruckv" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="truck∈TRUCK" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#.|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="truck∈ran(gate)" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.event#.|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Distribution/DistributionCenter.bpo|org.eventb.core.poFile#DistributionCenter|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="gate∈1 ‥ gates ⇸ TRUCK" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="trucks=ran(gate)" org.eventb.core.source="/Distribution/DistributionCenter.bum|org.eventb.core.machineFile#DistributionCenter|org.eventb.core.invariant#,"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

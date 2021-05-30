@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="fb_page" org.eventb.core.type="ℙ(fb_page)"/>
+<org.eventb.core.poIdentifier name="fb_person" org.eventb.core.type="ℙ(fb_person)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Fakebook/Machine.bpo|org.eventb.core.poFile#Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="directory" org.eventb.core.type="ℙ(fb_person×fb_page)"/>
+<org.eventb.core.poIdentifier name="fake" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirectorz" org.eventb.core.parentSet="/Fakebook/Machine.bpo|org.eventb.core.poFile#Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="directory'" org.eventb.core.type="ℙ(fb_person×fb_page)"/>
+<org.eventb.core.poIdentifier name="fake'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirectorz" org.eventb.core.parentSet="/Fakebook/Machine.bpo|org.eventb.core.poFile#Machine|org.eventb.core.poPredicateSet#EVTIDENTdirectorz" org.eventb.core.poStamp="22"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirector{" org.eventb.core.parentSet="/Fakebook/Machine.bpo|org.eventb.core.poFile#Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poIdentifier name="directory'" org.eventb.core.type="ℙ(fb_person×fb_page)"/>
+<org.eventb.core.poIdentifier name="page" org.eventb.core.type="fb_page"/>
+<org.eventb.core.poIdentifier name="person" org.eventb.core.type="fb_person"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirector{" org.eventb.core.parentSet="/Fakebook/Machine.bpo|org.eventb.core.poFile#Machine|org.eventb.core.poPredicateSet#EVTIDENTdirector{" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="person∈fb_person" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="page∈fb_page" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="page∉ran(directory)" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#)|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTdirector|" org.eventb.core.parentSet="/Fakebook/Machine.bpo|org.eventb.core.poFile#Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="23">
+<org.eventb.core.poIdentifier name="fake'" org.eventb.core.type="BOOL"/>
+<org.eventb.core.poIdentifier name="page" org.eventb.core.type="fb_page"/>
+<org.eventb.core.poIdentifier name="person" org.eventb.core.type="fb_person"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdirector|" org.eventb.core.parentSet="/Fakebook/Machine.bpo|org.eventb.core.poFile#Machine|org.eventb.core.poPredicateSet#EVTIDENTdirector\|" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="person∈fb_person" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="page∈fb_page" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="person∉dom(directory ▷ {page})" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.event#*|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Fakebook/Machine.bpo|org.eventb.core.poFile#Machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fake∈BOOL" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="directory∈fb_person ↔ fb_page" org.eventb.core.source="/Fakebook/Machine.bum|org.eventb.core.machineFile#Machine|org.eventb.core.invariant#-"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

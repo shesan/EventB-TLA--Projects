@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="trucks ≔ ∅" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="World"/>
+<org.eventb.core.variable name=")" org.eventb.core.comment="set of trucks current at the distribution center" org.eventb.core.identifier="trucks"/>
+<org.eventb.core.invariant name="*" org.eventb.core.label="inv1" org.eventb.core.predicate="trucks ⊆ TRUCK"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="arrive">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="truck"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="truck ∈ TRUCK"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="trucks ≔ trucks ∪ { truck }" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="card(trucks) &lt; gates"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="truck ∉ trucks"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="," org.eventb.core.comment="there cannot be more trucks that gates" org.eventb.core.label="inv2" org.eventb.core.predicate="card(trucks) ≤ gates"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="depart">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="truck"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="truck ∈ TRUCK"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="trucks ≔ trucks ∖ { truck }" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="truck ∈ trucks"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

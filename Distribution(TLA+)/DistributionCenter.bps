@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="dlf/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="vrn1/VWD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="arrive/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="arrive/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="arrive/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="arrive/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="arrive/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="arrive/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="depart/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="depart/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="depart/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="depart/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="depart/grd2/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="move/vrn1/NAT" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="move/vrn1/VAR" org.eventb.core.confidence="1000" org.eventb.core.poStamp="62" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

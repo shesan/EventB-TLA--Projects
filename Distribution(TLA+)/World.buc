@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.comment="set of trucks that deliver the COVID-19 vaccines" org.eventb.core.identifier="TRUCK"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="(" org.eventb.core.comment="number of gates of the distribution center" org.eventb.core.identifier="gates"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="gates ∈ ℕ "/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(TRUCK)"/>
+<org.eventb.core.axiom name="axm3" org.eventb.core.label="axm3" org.eventb.core.predicate="∀ n, f · n ∈ ℕ ∧ f ∈ 1‥n ⇸ TRUCK ⇒ (∀ A · A ⊆ 1‥n ⇒ card(f[A]) ≤ card(A))"/>
+<org.eventb.core.axiom name="axm1" org.eventb.core.label="thm1" org.eventb.core.predicate="∀ n, f · n ∈ ℕ ∧ f ∈ 1‥n ⇸ TRUCK ⇒ card(ran(f)) ≤ card(dom(f))" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm2" org.eventb.core.label="thm2" org.eventb.core.predicate="∀ n, i · n ∈ ℕ ∧ i ∈ 1‥n ⇒ card(1‥n ∖ { i }) = card(1‥n) − 1" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm4" org.eventb.core.label="axm4" org.eventb.core.predicate="gates &gt; 0"/>
+</org.eventb.core.contextFile>

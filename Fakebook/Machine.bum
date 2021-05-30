@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="fake ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="directory ≔ ∅" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Holder"/>
+<org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="post">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="person"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="page"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="person ∈ fb_person"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="page ∈ fb_page"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="directory ≔ directory ∪ {person ↦ page}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="page ∉ ran(directory)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="label">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="person"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="page"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="person ∈ fb_person"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="page ∈ fb_page"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="person ∉ dom(directory ▷ {page}) "/>
+<org.eventb.core.action name="," org.eventb.core.assignment="fake ≔ TRUE" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="fake"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="fake ∈ BOOL "/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="directory ∈ fb_person ↔ fb_page"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="directory"/>
+</org.eventb.core.machineFile>

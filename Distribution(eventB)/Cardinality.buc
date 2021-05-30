@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="X"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(X)"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.identifier="n"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="n ∈ ℕ"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="f"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="f ∈ 1‥n ⇸ X"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="." org.eventb.core.identifier="P"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="P ⊆ ℕ"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm5" org.eventb.core.predicate="P = { i ∣ i ∈ ℕ ∧ (∀ A · A ⊆ 1‥i ⇒ card(f[A]) ≤ card(A)) }"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="1" org.eventb.core.identifier="Q"/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="axm6" org.eventb.core.predicate="Q ⊆ ℕ"/>
+<org.eventb.core.axiom name="3" org.eventb.core.label="axm7" org.eventb.core.predicate="Q = ℕ ∖ P"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="lem1" org.eventb.core.predicate="0 ∈ P" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="5" org.eventb.core.label="lem2" org.eventb.core.predicate="∀ i · i &gt; 0 ∧ i−1 ∈ P ⇒ i ∈ P" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="6" org.eventb.core.label="lem3" org.eventb.core.predicate="∀ B · B ⊆ ℕ ∧ B ≠ ∅ ⇒ min(B) ∈ B" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="7" org.eventb.core.label="lem4" org.eventb.core.predicate="P = ℕ ∖ Q" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name=":" org.eventb.core.label="lem5" org.eventb.core.predicate="Q ≠ ∅ ⇒ min(Q) ∉ P" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name=";" org.eventb.core.label="lem6" org.eventb.core.predicate="Q ≠ ∅ ∧ 0 ∉ Q ⇒ min(Q) &gt; 0 ∧ min(Q) − 1 ∉ Q" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="lem7" org.eventb.core.predicate="Q = ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="9" org.eventb.core.label="thm1" org.eventb.core.predicate="∀ A · A ⊆ 1‥n ⇒ card(f[A]) ≤ card(A)" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

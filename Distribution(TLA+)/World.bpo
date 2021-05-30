@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="31">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="27">
+<org.eventb.core.poIdentifier name="TRUCK" org.eventb.core.type="ℙ(TRUCK)"/>
+<org.eventb.core.poIdentifier name="gates" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂ℤ,f⦂ℙ(ℤ×TRUCK)·n∈ℕ∧f∈1 ‥ n ⇸ TRUCK⇒(∀A⦂ℙ(ℤ)·A⊆1 ‥ n⇒finite(f[A])∧finite(A))" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂ℤ,f⦂ℙ(ℤ×TRUCK)·n∈ℕ∧f∈1 ‥ n ⇸ TRUCK⇒finite(ran(f))∧finite(dom(f))" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂ℤ,f⦂ℙ(ℤ×TRUCK)·n∈ℕ∧f∈1 ‥ n ⇸ TRUCK⇒card(ran(f))≤card(dom(f))" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂ℤ,i⦂ℤ·n∈ℕ∧i∈1 ‥ n⇒finite(1 ‥ n ∖ {i})∧finite(1 ‥ n)" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂ℤ,i⦂ℤ·n∈ℕ∧i∈1 ‥ n⇒card(1 ‥ n ∖ {i})=card(1 ‥ n) − 1" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP(" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="gates∈ℕ" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(TRUCK)" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP)" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP(" org.eventb.core.poStamp="28">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀n⦂ℤ,f⦂ℙ(ℤ×TRUCK)·n∈ℕ∧f∈1 ‥ n ⇸ TRUCK⇒(∀A⦂ℙ(ℤ)·A⊆1 ‥ n⇒card(f[A])≤card(A))" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP*" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀n⦂ℤ,f⦂ℙ(ℤ×TRUCK)·n∈ℕ∧f∈1 ‥ n ⇸ TRUCK⇒card(ran(f))≤card(dom(f))" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Distribution/World.bpo|org.eventb.core.poFile#World|org.eventb.core.poPredicateSet#HYP*" org.eventb.core.poStamp="31">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀n⦂ℤ,i⦂ℤ·n∈ℕ∧i∈1 ‥ n⇒card(1 ‥ n ∖ {i})=card(1 ‥ n) − 1" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="gates&gt;0" org.eventb.core.source="/Distribution/World.buc|org.eventb.core.contextFile#World|org.eventb.core.axiom#axm4"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
